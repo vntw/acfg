@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/venyii/acsrvmanager/server/user"
+	"github.com/venyii/acfg/server/user"
 )
 
 func TestLoginHandler(t *testing.T) {

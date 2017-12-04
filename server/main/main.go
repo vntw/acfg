@@ -9,12 +9,12 @@ import (
 	muxHandlers "github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
-	"github.com/venyii/acsrvmanager/server/ac"
-	"github.com/venyii/acsrvmanager/server/ac/server"
-	"github.com/venyii/acsrvmanager/server/app"
-	"github.com/venyii/acsrvmanager/server/handlers"
-	"github.com/venyii/acsrvmanager/server/static"
-	"github.com/venyii/acsrvmanager/server/user"
+	"github.com/venyii/acfg/server/ac"
+	"github.com/venyii/acfg/server/ac/server"
+	"github.com/venyii/acfg/server/app"
+	"github.com/venyii/acfg/server/handlers"
+	"github.com/venyii/acfg/server/static"
+	"github.com/venyii/acfg/server/user"
 )
 
 func main() {

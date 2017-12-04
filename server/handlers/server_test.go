@@ -9,9 +9,9 @@ import (
 
 	"github.com/go-ini/ini"
 
-	"github.com/venyii/acsrvmanager/server/ac"
-	"github.com/venyii/acsrvmanager/server/ac/config"
-	"github.com/venyii/acsrvmanager/server/ac/server"
+	"github.com/venyii/acfg/server/ac"
+	"github.com/venyii/acfg/server/ac/config"
+	"github.com/venyii/acfg/server/ac/server"
 )
 
 func TestServersHandlerWithNoData(t *testing.T) {

@@ -11,8 +11,8 @@ import (
 	"github.com/go-ini/ini"
 	"github.com/gorilla/mux"
 
-	"github.com/venyii/acsrvmanager/server/ac"
-	"github.com/venyii/acsrvmanager/server/ac/config"
+	"github.com/venyii/acfg/server/ac"
+	"github.com/venyii/acfg/server/ac/config"
 )
 
 func TestConfigsUploadHandler(t *testing.T) {

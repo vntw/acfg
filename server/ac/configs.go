@@ -9,8 +9,8 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/venyii/acsrvmanager/server/ac/config"
-	"github.com/venyii/acsrvmanager/server/ac/spec"
+	"github.com/venyii/acfg/server/ac/config"
+	"github.com/venyii/acfg/server/ac/spec"
 )
 
 type ConfigManager interface {

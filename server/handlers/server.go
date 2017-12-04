@@ -6,11 +6,11 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/venyii/acsrvmanager/server/ac"
-	"github.com/venyii/acsrvmanager/server/ac/plugins"
-	"github.com/venyii/acsrvmanager/server/ac/server"
-	"github.com/venyii/acsrvmanager/server/ac/spec"
-	"github.com/venyii/acsrvmanager/server/app"
+	"github.com/venyii/acfg/server/ac"
+	"github.com/venyii/acfg/server/ac/plugins"
+	"github.com/venyii/acfg/server/ac/server"
+	"github.com/venyii/acfg/server/ac/spec"
+	"github.com/venyii/acfg/server/app"
 )
 
 func ServersHandler(im ac.InstanceManager, si server.InstanceInfoer, cm ac.ConfigManager) http.HandlerFunc {

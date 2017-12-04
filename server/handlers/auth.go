@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/venyii/acsrvmanager/server/user"
+	"github.com/venyii/acfg/server/user"
 )
 
 func LoginHandler(w http.ResponseWriter, r *http.Request) {

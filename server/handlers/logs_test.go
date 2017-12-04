@@ -11,8 +11,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/venyii/acsrvmanager/server/ac"
-	"github.com/venyii/acsrvmanager/server/app"
+	"github.com/venyii/acfg/server/ac"
+	"github.com/venyii/acfg/server/app"
 )
 
 func TestLogsHandlerWithNoData(t *testing.T) {

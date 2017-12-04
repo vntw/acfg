@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"syscall"
 
-	"github.com/venyii/acsrvmanager/server/ac/spec"
+	"github.com/venyii/acfg/server/ac/spec"
 )
 
 type Instance struct {

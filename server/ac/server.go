@@ -12,12 +12,12 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/venyii/acsrvmanager/server/ac/config"
-	"github.com/venyii/acsrvmanager/server/ac/plugins"
-	"github.com/venyii/acsrvmanager/server/ac/portalloc"
-	"github.com/venyii/acsrvmanager/server/ac/server"
-	"github.com/venyii/acsrvmanager/server/ac/spec"
-	"github.com/venyii/acsrvmanager/server/app"
+	"github.com/venyii/acfg/server/ac/config"
+	"github.com/venyii/acfg/server/ac/plugins"
+	"github.com/venyii/acfg/server/ac/portalloc"
+	"github.com/venyii/acfg/server/ac/server"
+	"github.com/venyii/acfg/server/ac/spec"
+	"github.com/venyii/acfg/server/app"
 )
 
 type InstanceManager interface {

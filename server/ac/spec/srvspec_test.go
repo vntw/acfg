@@ -3,8 +3,8 @@ package spec
 import (
 	"testing"
 
-	"github.com/venyii/acsrvmanager/server/ac/plugins"
-	"github.com/venyii/acsrvmanager/server/ac/portalloc"
+	"github.com/venyii/acfg/server/ac/plugins"
+	"github.com/venyii/acfg/server/ac/portalloc"
 )
 
 type dummyPlugin struct {

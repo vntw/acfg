@@ -3,7 +3,7 @@ package ac
 import (
 	"testing"
 
-	"github.com/venyii/acsrvmanager/server/ac/config"
+	"github.com/venyii/acfg/server/ac/config"
 )
 
 func TestCreateServerConfigs(t *testing.T) {
