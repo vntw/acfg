@@ -1,0 +1,100 @@
+@mixin overflow-listing {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.servers__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: calc(100vh - var(--header-height) - var(--header-border-height));
+}
+
+.servers__container {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 5px 10px;
+  overflow-y: scroll;
+  background: #e0e0e0;
+
+  .no-items {
+    color: #989898;
+  }
+}
+
+.server__item {
+  border: 1px solid #ccc;
+  background: var(--color-red);
+  color: #fff;
+  display: grid;
+  align-items: center;
+  margin-bottom: 10px;
+  grid-template-areas:
+    "name name name name name"
+    "track sessions clients time cars"
+    "net net net net net"
+    "controls controls controls controls controls";
+
+  .sub {
+    font-size: 0.75rem;
+    padding: 6px;
+    background: #840202;
+  }
+
+  .name {
+    @include overflow-listing;
+    grid-area: name;
+    padding: 10px;
+    border-bottom: 1px solid #7d0000;
+    border-right: 1px solid #7d0000;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .sessions {
+    grid-area: sessions;
+    border-right: 1px solid #650101;
+    white-space: nowrap;
+
+    .session {
+      padding: 2px 5px;
+
+      &.active {
+        background: var(--color-black);
+        border-radius: 5px;
+        border: 1px solid #5f5f5f;
+      }
+    }
+  }
+  .clients {
+    grid-area: clients;
+    border-right: 1px solid #650101;
+  }
+  .track {
+    grid-area: track;
+    border-right: 1px solid #650101;
+  }
+  .cars {
+    @include overflow-listing;
+    grid-area: cars;
+  }
+  .time {
+    grid-area: time;
+    border-right: 1px solid #650101;
+  }
+  .net {
+    grid-area: net;
+    background: var(--color-black);
+    padding: 5px;
+  }
+  .controls {
+    grid-area: controls;
+    background: #e8e8e8;
+    padding: 3px;
+    color: var(--color-black);
+    text-align: right;
+
+    .btn {
+      font-size: .7rem;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.config__dropzone {
+  border: 2px dashed #888;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  font-size: .9em;
+  cursor: pointer;
+  color: #888;
+  text-align: center;
+}
+
+.configs__container {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #f1f1f1;
+  border-left: 1px solid #bdbdbd;
+  overflow-y: scroll;
+  box-shadow: -1px 0px 3px #d2d2d2;
+}
+
+.configs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &-item {
+    background: #fff;
+    color: var(--color-black);
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+
+    .btn {
+      font-size: .7rem;
+    }
+  }
+}

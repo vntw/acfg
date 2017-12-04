@@ -1,0 +1,34 @@
+@import 'base';
+@import 'alert';
+@import 'buttons';
+@import 'header';
+
+@import 'loader';
+@import 'modal';
+
+@import 'server';
+@import 'config';
+@import 'log';
+@import 'login';
+
+.no-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 2rem;
+  color: #8e8e8e;
+  cursor: default;
+
+  h2,
+  h4 {
+    margin: .5rem;
+    font-size: 2rem;
+  }
+}
+
+.simple-page__container {
+  padding: 2.5rem 4rem;
+  text-align: center;
+}

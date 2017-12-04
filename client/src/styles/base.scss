@@ -1,0 +1,86 @@
+@import 'vendor';
+
+:root {
+  --color-red: #9d0909;
+  --color-black: #383636;
+
+  --header-border-height: 2px;
+  --header-height: 40px;
+  --header-bg-color: var(--color-black);
+}
+
+html,
+body {
+  font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background: #f7f7f7;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: .8rem;
+}
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: .6rem;
+}
+
+small {
+  font-size: 0.65em;
+}
+
+p {
+  margin: 0 0 .8em 0;
+}
+
+a {
+  color: var(--color-red);
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px dashed var(--color-red);
+  }
+}
+
+input {
+  outline: none;
+  margin: 0;
+  flex: 1 0 auto;
+  outline: 0;
+  max-width: 100%;
+  text-align: left;
+  padding: .8em 1em;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid rgba(34, 36, 38, .15);
+  color: rgba(0, 0, 0, .9);
+  border-radius: .1rem;
+  transition: box-shadow .1s ease, border-color .1s ease;
+  box-shadow: none;
+
+  &:focus {
+    border-color: #85b7d9;
+    background: #fff;
+    color: rgba(0, 0 , 0, .8);
+    box-shadow: none;
+  }
+}

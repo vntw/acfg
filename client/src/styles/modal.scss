@@ -1,0 +1,16 @@
+.ReactModal__Content {
+  margin: 0 32px !important;
+  max-height: 95vh !important;
+  overflow-y: auto !important;
+  background: #fff !important;
+  border-radius: 2px !important;
+  outline: none !important;
+  padding: 1rem !important;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+              0 24px 38px 3px rgba(0, 0, 0, 0.14),
+              0 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.54) !important;
+}

@@ -1,0 +1,83 @@
+.btn {
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  background: #ffffff linear-gradient(transparent, rgba(0, 0, 0, 0.02));
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0.7em 0.8em 0.7em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: normal;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.21428571em;
+  box-shadow: 0 0 0 1px #dddddd inset, 0 0 0 0 transparent;
+  user-select: none;
+  transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    background-color: #ffffff;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.02));
+    box-shadow: 0 0 0 1px #dddddd inset, 0 2px 3px 0 rgba(0, 0, 0, 0.2) !important;
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+    color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 0 1px #dddddd inset;
+  }
+
+  &--primary {
+    background-color: #9d0809;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+    color: #ffffff;
+    text-shadow: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+
+    &:hover {
+      background-color: darken(#9d0809, 2%);
+      color: #ffffff;
+      text-shadow: none;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.35) !important;
+    }
+
+    &:focus {
+      background-color: darken(#9d0809, 4%);
+      color: #ffffff;
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  &--secondary {
+    background: #4c4c4c;
+    color: #dcdcdc;
+    box-shadow: 0 0 0 1px #505050 inset;
+
+    &:hover {
+      background-color: #3b3b3b;
+      color: #ffffff;
+      text-shadow: none;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.35) !important;
+    }
+
+    &:focus {
+      background-color: #2d2d2d;
+      color: #ffffff;
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
