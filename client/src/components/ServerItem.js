@@ -28,6 +28,8 @@ class ServerItem extends Component {
       <Modal
         isOpen={this.state.tmpConfigModalOpen}
         onRequestClose={() => this.setState({ tmpConfigModalOpen: false })}
+        ariaHideApp={false}
+        shouldReturnFocusAfterClose={false}
       >
         <h3>Server Details</h3>
 

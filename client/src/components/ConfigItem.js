@@ -47,6 +47,8 @@ class ConfigItem extends React.Component {
         <Modal
           isOpen={this.state.detailsOpen}
           onRequestClose={() => this.setState({ detailsOpen: false })}
+          ariaHideApp={false}
+          shouldReturnFocusAfterClose={false}
         >
           <h3>Config Details</h3>
 
