@@ -20,7 +20,7 @@ func NewServerSpec() *ServerSpec {
 		PortReqs: portalloc.PortReqs{
 			Tcp:  portalloc.PortReq{Num: 1, Provider: portalloc.RandomPort{}},
 			Udp:  portalloc.PortReq{Num: 1, Provider: portalloc.RandomPort{}},
-			Http: portalloc.PortReq{Num: 1, Provider: portalloc.PortRange{8000, 10000}},
+			Http: portalloc.PortReq{Num: 1, Provider: portalloc.PortRange{Min: 8000, Max: 10000}},
 		},
 	}
 }
