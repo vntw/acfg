@@ -63,7 +63,7 @@ func (p Stracker) PortReqs() portalloc.PortReqs {
 	return portalloc.PortReqs{
 		Tcp: portalloc.PortReq{
 			Num:      1,
-			Provider: portalloc.PortSelection{tcpPortRange},
+			Provider: portalloc.PortSelection{P: tcpPortRange},
 		},
 		Http: portalloc.PortReq{
 			Num:      1,
