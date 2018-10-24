@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import { getShortSessionName } from '../ac/session';
 import LoadIndicator from './LoadIndicator';
 import Timeleft from './server/Timeleft';
+import Duration from './server/Duration';
 import IniView from './config/IniView';
 
 class ServerItem extends Component {
@@ -76,7 +77,13 @@ class ServerItem extends Component {
             return (
               <span key={s} className={`session ${isActive ? 'active' : ''}`}>
                 {getShortSessionName(s)}{' '}
-                <small>({isActive ? <Timeleft startSeconds={server.status.timeleft} /> : server.status.durations[i]})</small>
+                <small>
+                  ({
+                    isActive ?
+                      <Timeleft seconds={server.status.timeleft} /> :
+                      <Duration seconds={server.status.durations[i] * 60} />
+                  })
+                </small>
               </span>
             );
           })}

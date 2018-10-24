@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Timeleft from './Timeleft';
+import Duration from './Duration';
 
-describe('<Timeleft />', () => {
+describe('<Duration />', () => {
   const dataProvider = {
     'should pad mins/secs < 10 with zero': {
       sec: 3905,
@@ -25,7 +25,7 @@ describe('<Timeleft />', () => {
   for (const expectation in dataProvider) {
     it(expectation, () => {
       const { sec, expected } = dataProvider[expectation];
-      const wrapper = shallow(<Timeleft startSeconds={sec} />);
+      const wrapper = shallow(<Duration seconds={sec} />);
       const actual = wrapper.find('span').text();
       expect(actual).toEqual(expected);
     });
