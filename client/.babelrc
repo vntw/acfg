@@ -1,40 +1,36 @@
 {
   "plugins": [
-    "transform-runtime",
     "transform-function-bind"
   ],
   "env": {
     "development": {
       "presets": [
-        "env",
-        "react",
-        "react-hmre",
-        "stage-1"
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "react-hot-loader/babel"
       ]
     },
     "production": {
       "presets": [
-        [
-          "env",
-          {
-            "es2015": {
-              "modules": false
-            }
-          }
-        ],
-        "react",
-        "stage-1"
+        "@babel/preset-env",
+        "@babel/preset-react"
       ],
       "plugins": [
-        "transform-react-constant-elements",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-react-constant-elements",
         "transform-react-remove-prop-types"
       ]
     },
     "test": {
       "presets": [
-        "env",
-        "react",
-        "stage-1"
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "@babel/plugin-proposal-class-properties"
       ]
     }
   }
