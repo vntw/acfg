@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, IndexLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 const Header = ({ onLogout }) => (
   <header>
     <nav>
-      <IndexLink to="/" className="header__logo">
+      <NavLink to="/" className="header__logo">
         <img src="/static/img/ac-logo.png" />
-      </IndexLink>
+      </NavLink>
       <ul>
-        <li><IndexLink className="btn btn--primary" to="/">Servers</IndexLink></li>
-        <li><Link className="btn btn--primary" to="/logs">Logs</Link></li>
+        <li><NavLink className="btn btn--primary" to="/">Servers</NavLink></li>
+        <li><NavLink className="btn btn--primary" to="/logs">Logs</NavLink></li>
         <li><button onClick={onLogout} className="btn btn--secondary">Logout</button></li>
       </ul>
     </nav>

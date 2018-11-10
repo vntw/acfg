@@ -128,7 +128,7 @@ export function stopServer(uuid) {
   return dispatch => {
     dispatch(serverLoadingStart(uuid));
 
-    return fetchApi(`/api/servers/${uuid}/stop`)
+    return fetchApi(`/api/servers/${uuid}/stop`, { method: 'POST' })
       .then(response => {
         if (response.status === 204) {
           dispatch(serverStopped(uuid));

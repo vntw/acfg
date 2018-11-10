@@ -16,16 +16,13 @@ export default {
     path.resolve(__dirname, 'src/index.js') // Defining path seems necessary for this to work consistently on Windows machines.
   ],
   target: 'web',
+  mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'), // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development'), // Tells React to build in either dev or prod modes. https://facebook.github.io/react/downloads.html (See bottom)
-      __DEV__: true
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
@@ -42,7 +39,8 @@ export default {
   module: {
     rules: [
       {
-        test: /\.jsx?$/, exclude: /node_modules/,
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         use: ['babel-loader'],
       },
       {
