@@ -57,7 +57,7 @@ func createRouter(cfg app.Config) http.Handler {
 	r.Handle("/api/servers", auth(handlers.ServersHandler(im, si, cm))).Methods("GET")
 	r.Handle("/api/servers/start", auth(handlers.StartServerHandler(cfg, im, si, cm))).Methods("POST")
 	r.Handle("/api/servers/start/upload", auth(handlers.UploadAndStartServerHandler(cfg, im, si, cm))).Methods("POST")
-	r.Handle("/api/servers/{uuid}/stop", auth(handlers.StopServerHandler(im))).Methods("GET")
+	r.Handle("/api/servers/{uuid}/stop", auth(handlers.StopServerHandler(im))).Methods("POST")
 	r.Handle("/api/servers/{uuid}/reconfig", auth(handlers.ReconfigServerHandler(cfg, im, si, cm))).Methods("POST")
 
 	// Client App
