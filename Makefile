@@ -8,6 +8,7 @@ BUILD_DIR = build/
 .PHONY: all
 all:
 	$(MAKE) clean
+	$(MAKE) deps
 	$(MAKE) client
 	$(MAKE) static
 	$(MAKE) darwin
@@ -39,10 +40,14 @@ clean:
 	-rm -r build/; \
 	mkdir build/
 
+.PHONY: deps
+deps:
+	cd client && yarn && \
+	cd ../server && go mod tidy
+
 .PHONY: client
 client:
 	cd client/ && \
-	yarn && \
 	yarn prebuild && \
 	yarn build-dist
 
