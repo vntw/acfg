@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/venyii/acfg/server/ac/config"
+	"acfg/ac/config"
 )
 
 func handleConfigFilesUpload(r *http.Request) (config.ServerConfigFiles, error) {

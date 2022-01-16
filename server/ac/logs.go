@@ -8,8 +8,8 @@ import (
 	"sort"
 	"strings"
 
-	instlog "github.com/venyii/acfg/server/ac/server/log"
-	"github.com/venyii/acfg/server/app"
+	instlog "acfg/ac/server/log"
+	"acfg/app"
 )
 
 type ServerLogsManager interface {

@@ -11,8 +11,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/venyii/acfg/server/ac"
-	"github.com/venyii/acfg/server/app"
+	"acfg/ac"
+	"acfg/app"
 )
 
 func TestLogsHandlerWithNoData(t *testing.T) {

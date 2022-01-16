@@ -4,7 +4,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/venyii/acfg/server/ac/portalloc"
+	"acfg/ac/portalloc"
 )
 
 type Plugins []Plugin

@@ -5,7 +5,7 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/venyii/acfg/server/ac"
+	"acfg/ac"
 )
 
 func ConfigsUploadHandler(cm ac.ConfigManager) http.HandlerFunc {

@@ -1,9 +1,9 @@
 package spec
 
 import (
-	"github.com/venyii/acfg/server/ac/config"
-	"github.com/venyii/acfg/server/ac/plugins"
-	"github.com/venyii/acfg/server/ac/portalloc"
+	"acfg/ac/config"
+	"acfg/ac/plugins"
+	"acfg/ac/portalloc"
 )
 
 type ServerSpec struct {

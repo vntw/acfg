@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/venyii/acfg/server/ac/config"
-	instlog "github.com/venyii/acfg/server/ac/server/log"
-	"github.com/venyii/acfg/server/app"
+	"acfg/ac/config"
+	instlog "acfg/ac/server/log"
+	"acfg/app"
 )
 
 func TestNewServerLog(t *testing.T) {

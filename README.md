@@ -68,12 +68,11 @@ All other options like database config should be done by you.
 ## Development
 
 #### Build Dependencies
-- [dep](https://github.com/golang/dep) package manager to install Go project dependencies
 - [fileb0x](https://github.com/UnnoTed/fileb0x) to create a single binary including static client code
 
 #### Dependencies
 Install the JS dependencies using Yarn in the `client` directory, then install all Go dependencies for the dummy
-servers and the server itself using `dep ensure` in each directory.
+servers and the server itself using `go mod tidy` in each directory.
 
 #### Symlink dummy servers
 Add symlinks for the dummy servers of your platform (darwin or linux) in `dummysrv/{acserver,stracker}`.

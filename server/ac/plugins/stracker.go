@@ -11,7 +11,7 @@ import (
 
 	"github.com/go-ini/ini"
 
-	"github.com/venyii/acfg/server/ac/portalloc"
+	"acfg/ac/portalloc"
 )
 
 var tcpPortRange = []int{

@@ -3,7 +3,7 @@ package ac
 import (
 	"testing"
 
-	"github.com/venyii/acfg/server/ac/server"
+	"acfg/ac/server"
 )
 
 func TestNewMemoryInstanceManager(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/venyii/acfg/server/static"
+	"acfg/static"
 )
 
 func TestClientAppHandler(t *testing.T) {
