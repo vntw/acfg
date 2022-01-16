@@ -42,6 +42,7 @@ clean:
 .PHONY: client
 client:
 	cd client/ && \
+	yarn && \
 	yarn prebuild && \
 	yarn build-dist
 
