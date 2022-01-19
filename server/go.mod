@@ -9,7 +9,6 @@ require (
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/kelseyhightower/envconfig v1.4.0
-	golang.org/x/net v0.0.0-20220114011407-0dd24b26b47d
 )
 
 require (
