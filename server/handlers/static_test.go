@@ -16,7 +16,8 @@ func TestClientAppHandler(t *testing.T) {
 	}
 
 	rr := httptest.NewRecorder()
-	handler := http.HandlerFunc(ClientAppHandler(http.FileServer(static.HTTP), static.HTTP))
+	fs := http.FS(static.StaticFS())
+	handler := http.HandlerFunc(ClientAppHandler(http.FileServer(fs), fs))
 
 	handler.ServeHTTP(rr, req)
 

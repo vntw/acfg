@@ -61,7 +61,8 @@ func createRouter(cfg app.Config) http.Handler {
 	r.Handle("/api/servers/{uuid}/reconfig", auth(handlers.ReconfigServerHandler(cfg, im, si, cm))).Methods("POST")
 
 	// Client App
-	clientAppHandler := handlers.ClientAppHandler(http.FileServer(static.HTTP), static.HTTP)
+	fs := http.FS(static.StaticFS())
+	clientAppHandler := handlers.ClientAppHandler(http.FileServer(fs), fs)
 	r.PathPrefix("/").Handler(http.StripPrefix("/", clientAppHandler))
 
 	var origins []string

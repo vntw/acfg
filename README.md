@@ -67,9 +67,6 @@ All other options like database config should be done by you.
 
 ## Development
 
-#### Build Dependencies
-- [fileb0x](https://github.com/UnnoTed/fileb0x) to create a single binary including static client code
-
 #### Dependencies
 Install the JS dependencies using Yarn in the `client` directory, then install all Go dependencies for the dummy
 servers and the server itself using `go mod tidy` in each directory.

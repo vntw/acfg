@@ -53,7 +53,7 @@ client:
 
 .PHONY: static
 static:
-	cd server && fileb0x b0x.toml
+	cp -R client/dist/* server/static/
 
 .PHONY: darwin
 darwin:
