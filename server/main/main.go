@@ -9,12 +9,12 @@ import (
 	muxHandlers "github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
-	"github.com/venyii/acfg/server/ac"
-	"github.com/venyii/acfg/server/ac/server"
-	"github.com/venyii/acfg/server/app"
-	"github.com/venyii/acfg/server/handlers"
-	"github.com/venyii/acfg/server/static"
-	"github.com/venyii/acfg/server/user"
+	"acfg/ac"
+	"acfg/ac/server"
+	"acfg/app"
+	"acfg/handlers"
+	"acfg/static"
+	"acfg/user"
 )
 
 func main() {
@@ -61,7 +61,8 @@ func createRouter(cfg app.Config) http.Handler {
 	r.Handle("/api/servers/{uuid}/reconfig", auth(handlers.ReconfigServerHandler(cfg, im, si, cm))).Methods("POST")
 
 	// Client App
-	clientAppHandler := handlers.ClientAppHandler(http.FileServer(static.HTTP), static.HTTP)
+	fs := http.FS(static.StaticFS())
+	clientAppHandler := handlers.ClientAppHandler(http.FileServer(fs), fs)
 	r.PathPrefix("/").Handler(http.StripPrefix("/", clientAppHandler))
 
 	var origins []string

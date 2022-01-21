@@ -5,8 +5,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/venyii/acfg/server/ac"
-	"github.com/venyii/acfg/server/app"
+	"acfg/ac"
+	"acfg/app"
 )
 
 func LogsHandler(cfg app.Config, sl ac.ServerLogsManager) http.HandlerFunc {

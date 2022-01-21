@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/venyii/acfg/server/static"
+	"acfg/static"
 )
 
 func TestClientAppHandler(t *testing.T) {
@@ -16,7 +16,8 @@ func TestClientAppHandler(t *testing.T) {
 	}
 
 	rr := httptest.NewRecorder()
-	handler := http.HandlerFunc(ClientAppHandler(http.FileServer(static.HTTP), static.HTTP))
+	fs := http.FS(static.StaticFS())
+	handler := http.HandlerFunc(ClientAppHandler(http.FileServer(fs), fs))
 
 	handler.ServeHTTP(rr, req)
 

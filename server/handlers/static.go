@@ -15,7 +15,6 @@ func ClientAppHandler(handler http.Handler, httpfs http.FileSystem) http.Handler
 		f, err := httpfs.Open(filename)
 
 		if err == nil {
-			//log.Println("Access file:", filename)
 			f.Close()
 			handler.ServeHTTP(w, r)
 			return
@@ -23,7 +22,6 @@ func ClientAppHandler(handler http.Handler, httpfs http.FileSystem) http.Handler
 
 		// Let the client app do the routing
 		if os.IsNotExist(err) {
-			//log.Println("Fall back to index.html:", filename)
 			w.Write(idx)
 			return
 		}
